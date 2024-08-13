@@ -7,7 +7,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # Load datasets/apps.csv into a DataFrame
-apps_with_duplicates = pd.read_csv('datasets/apps.csv')
+apps_with_duplicates = pd.read_csv('apps.csv')
 
 # Drop all duplicate rows from apps_with_duplicates
 apps = apps_with_duplicates.drop_duplicates()
@@ -114,7 +114,7 @@ plt.title('Number of Installs of Paid Apps vs. Free Apps')
 plt.show()
 
 # Load user_reviews.csv
-reviews_df = pd.read_csv('datasets/user_reviews.csv')
+reviews_df = pd.read_csv('user_reviews.csv')
 
 # Join the two dataframes
 merged_df = apps.merge(reviews_df, on='App')
